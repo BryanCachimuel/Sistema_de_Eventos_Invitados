@@ -26,14 +26,14 @@
                                     </div>
 
                                     <div class="form-floating mb-3">
-                                        <input type="password" class="form-control" name="password" id="password" placeholder="Password">
-                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control" name="password" id="password" placeholder="Correo">
+                                        <label for="password">Contraseña</label>
                                     </div>
 
                                     <div class="d-grid">
                                         <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Inicio de Sesión</button>
                                         <div class="text-center">
-                                            <a class="small" href="#">Registrate Aquí</a>
+                                            <a class="small" href="registro.php">Registrate Aquí</a>
                                         </div>
                                     </div>
 
