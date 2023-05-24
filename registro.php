@@ -19,20 +19,20 @@
                             <div class="col-md-9 col-lg-8 mx-auto">
                                 <h3 class="login-heading mb-4">Registro de Usuarios</h3>
                                 
-                                <form>
+                                <form action="servidor/registro/registrar.php" method="">
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="usuario" placeholder="Usuario" required autofocus>
+                                        <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario" required autofocus>
                                         <label for="usuario">Usuario</label>
                                     </div>
 
                                     <div class="form-floating mb-3">
-                                        <input type="email" class="form-control" id="correo" placeholder="name@example.com">
+                                        <input type="email" class="form-control" id="correo" name="correo" placeholder="name@example.com" required>
                                         <label for="correo">Correo</label>
                                     </div>
 
 
                                     <div class="form-floating mb-3">
-                                        <input type="password" class="form-control" id="password" placeholder="Correo">
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required>
                                         <label for="password">Contraseña</label>
                                     </div>
 
