@@ -21,12 +21,12 @@
                                 <!-- Sign In Form -->
                                 <form>
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Usuario">
+                                        <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Usuario" required>
                                         <label for="usuario">Usuario</label>
                                     </div>
 
                                     <div class="form-floating mb-3">
-                                        <input type="password" class="form-control" name="password" id="password" placeholder="Correo">
+                                        <input type="password" class="form-control" name="password" id="password" placeholder="Correo" required>
                                         <label for="password">Contraseña</label>
                                     </div>
 
