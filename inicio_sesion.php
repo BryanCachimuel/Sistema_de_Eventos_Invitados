@@ -19,7 +19,7 @@
                             <div class="col-md-9 col-lg-8 mx-auto">
                             <h3 class="login-heading mb-4">Inicio de Sesión</h3>
                                 <!-- Sign In Form -->
-                                <form>
+                                <form action="servidor/inicio_sesion/logear.php" method="POST" autocomplete="off">
                                     <div class="form-floating mb-3">
                                         <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Usuario" required>
                                         <label for="usuario">Usuario</label>
