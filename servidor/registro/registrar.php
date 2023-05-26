@@ -4,16 +4,24 @@
 
     $usuario = $_POST['usuario'];
     $correo = $_POST['correo'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $password = $_POST['password'];
+    $confirmar_password = $_POST['confirmar_password'];
 
     $Auth = new Auth();
     
-    /* una vez que registre se va a redirigir al inicio de sesión */
-    if($Auth->registrar($usuario, $correo, $password)){
-        header("location:../../inicio_sesion.php");
+    if($password == $confirmar_password){
+        $password_ingresado = password_hash($password,PASSWORD_DEFAULT);
+        /* una vez que registre se va a redirigir al inicio de sesión */
+        if($Auth->registrar($usuario, $correo, $password_ingresado)){
+            header("location:../../inicio_sesion.php");
+        }else{
+            echo "No se pudo registrar al Usuario";
+        }
     }else{
-        echo "No se pudo registrar al Usuario";
+        header("location:../../registro.php");
+        echo "Las contraseñas no coinciden deben ser iguales";
     }
+   
 
     
 
