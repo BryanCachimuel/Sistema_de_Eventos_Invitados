@@ -2,7 +2,7 @@
   session_start();
 
   if(!isset($_SESSION['usuario'])){
-    header("location:inicio_sesion.php");
+    header("location:../inicio_sesion.php");
   }
 ?>
 <!doctype html>
@@ -30,7 +30,7 @@
             <?php echo $_SESSION['usuario']; ?>
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="servidor/inicio_sesion/logout.php">Cerrar Sesión</a></li>
+            <li><a class="dropdown-item" href="../servidor/inicio_sesion/logout.php">Cerrar Sesión</a></li>
           </ul>
         </li>
       </ul>
