@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sistema de Eventos e Invitados</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="publico/css/inicio_sesion.css">
+    <link rel="stylesheet" href="publico/css/registro.css">
+    <link rel="stylesheet" href="publico/css/estilos.css">
 </head>
   <body>
     
@@ -13,11 +14,11 @@
         <div class="row g-0">
             <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
                 <div class="col-md-8 col-lg-6">
-                <div class="login d-flex align-items-center py-5">
+                <div class="registro d-flex align-items-center py-5">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-9 col-lg-8 mx-auto">
-                                <h3 class="login-heading mb-4">Registro de Usuarios</h3>
+                                <h3 class="registro-heading mb-4">Registro de Usuarios</h3>
                                 
                                 <form action="servidor/registro/registrar.php" method="POST" autocomplete="off">
                                     <div class="form-floating mb-3">
@@ -42,7 +43,7 @@
                                     </div>
 
                                     <div class="d-grid mb-2">
-                                        <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Registrar</button>
+                                        <button class="btn btn-lg btn-purple btn-registro fw-bold text-uppercase" type="submit">Registrar</button>
                                     </div>
 
                                     <a class="d-block text-center mt-2 small" href="inicio_sesion.php">Si ya te registraste inicia sesión</a>

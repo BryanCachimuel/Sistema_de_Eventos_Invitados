@@ -6,6 +6,7 @@
     <title>Sistema de Eventos e Invitados</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="publico/css/inicio_sesion.css">
+    <link rel="stylesheet" href="publico/css/estilos.css">
 </head>
   <body>
     
@@ -31,7 +32,7 @@
                                     </div>
 
                                     <div class="d-grid">
-                                        <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Inicio de Sesión</button>
+                                        <button class="btn btn-lg btn-purple btn-login text-uppercase fw-bold mb-2" type="submit">Inicio de Sesión</button>
                                         <div class="text-center">
                                             <a class="small" href="registro.php">Registrate Aquí</a>
                                         </div>
