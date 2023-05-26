@@ -7,10 +7,16 @@
 
     $Auth = new Auth();
 
-    if($Auth->inicio_sesion($usuario, $password)){
-        header("location:../../inicio.php");
+    if($usuario != "" && $password != ""){
+        if($Auth->inicio_sesion($usuario, $password)){
+            header("location:../../inicio.php");
+        }else{
+            header("location:../../inicio_sesion.php");
+            echo "No se pudo realizar el Inicio de Sesión";
+        }
     }else{
-        echo "No se pudo realizar el Inicio de Sesión";
+        header("location:../../inicio_sesion.php");
+        echo "Ingrese Información dentro de los campos de texto";
     }
 
 
