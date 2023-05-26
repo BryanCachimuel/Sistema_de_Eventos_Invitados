@@ -9,6 +9,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="">Inicio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="">Eventos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="">Listas de Invitados</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <?php echo $_SESSION['usuario']; ?>
