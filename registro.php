@@ -19,7 +19,7 @@
                             <div class="col-md-9 col-lg-8 mx-auto">
                                 <h3 class="login-heading mb-4">Registro de Usuarios</h3>
                                 
-                                <form action="servidor/registro/registrar.php" method="">
+                                <form action="servidor/registro/registrar.php" method="POST" autocomplete="off">
                                     <div class="form-floating mb-3">
                                         <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario" required autofocus>
                                         <label for="usuario">Usuario</label>
@@ -34,6 +34,11 @@
                                     <div class="form-floating mb-3">
                                         <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required>
                                         <label for="password">Contraseña</label>
+                                    </div>
+
+                                    <div class="form-floating mb-3">
+                                        <input type="password" class="form-control" id="confirmar_password" name="confirmar_password" placeholder="Contraseña" required>
+                                        <label for="confirmar_password">Contraseña</label>
                                     </div>
 
                                     <div class="d-grid mb-2">
