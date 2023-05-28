@@ -10,20 +10,20 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="">Inicio</a>
+            <a class="nav-link active" aria-current="page" href=""><i class="fa-solid fa-house-chimney-user"></i> Inicio</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="">Eventos</a>
+            <a class="nav-link active" href=""><i class="fa-solid fa-calendar-days"></i> Eventos</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="">Listas de Invitados</a>
+            <a class="nav-link active" href=""><i class="fa-solid fa-clipboard-list"></i> Listas de Invitados</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <?php echo $_SESSION['usuario']; ?>
+            <i class="fa-solid fa-user-tie"></i> <?php echo $_SESSION['usuario']; ?>
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="../servidor/inicio_sesion/logout.php">Cerrar Sesión</a></li>
+            <li><a class="dropdown-item" href="../servidor/inicio_sesion/logout.php"><i class="fa-solid fa-person-walking-dashed-line-arrow-right"></i> Cerrar Sesión</a></li>
           </ul>
         </li>
       </ul>
