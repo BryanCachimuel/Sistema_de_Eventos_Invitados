@@ -9,7 +9,7 @@
 
     if($usuario != "" && $password != ""){
         if($Auth->inicio_sesion($usuario, $password)){
-            header("location:../../inicio.php");
+            header("location:../../modulos/inicio.php");
         }else{
             header("location:../../inicio_sesion.php");
             echo "No se pudo realizar el Inicio de Sesión";
