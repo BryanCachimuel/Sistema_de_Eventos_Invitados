@@ -12,12 +12,17 @@
           Listado de Eventos <br>
           <a href="" class="btn btn-purple">Evento Nuevo</a>
           <hr>
-          <table id="tablaEventos"></table>
+          <div id="tablaEventos"></div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
+
 <?php include "partes/footer.php"; ?>
+
+<script src="../publico/js/eventos.js"></script>
+
+
     
