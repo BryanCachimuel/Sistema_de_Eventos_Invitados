@@ -10,13 +10,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href=""><i class="fa-solid fa-house-chimney-user"></i> Inicio</a>
+            <a class="nav-link active" aria-current="page" href="inicio.php"><i class="fa-solid fa-house-chimney-user"></i> Inicio</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href=""><i class="fa-solid fa-calendar-days"></i> Eventos</a>
+            <a class="nav-link active" href="eventos.php"><i class="fa-solid fa-calendar-days"></i> Eventos</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href=""><i class="fa-solid fa-clipboard-list"></i> Listas de Invitados</a>
+            <a class="nav-link active" href="listados.php"><i class="fa-solid fa-clipboard-list"></i> Listas de Invitados</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
