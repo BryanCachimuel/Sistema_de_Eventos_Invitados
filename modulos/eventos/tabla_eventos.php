@@ -15,8 +15,16 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>
+                <span class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal_editar_evento">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </span>
+            </td>
+            <td>
+                <span class="btn btn-danger">
+                    <i class="fa-solid fa-trash-can"></i>
+                </span>
+            </td>
         </tr>
     </tbody>
 </table>
