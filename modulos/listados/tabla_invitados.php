@@ -13,8 +13,16 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>
+                <span class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal_agregar_invitado">
+                    <i class="fa-solid fa-user-pen"></i>
+                </span>
+            </td>
+            <td>
+                <span class="btn btn-danger">
+                    <i class="fa-solid fa-user-xmark"></i>
+                </span>
+            </td>
         </tr>
     </tbody>
 </table>

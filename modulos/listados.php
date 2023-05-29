@@ -11,7 +11,9 @@
         <div class="card-body">
           Listado de Invitados
           <br>
-          <a href="" class="btn btn-purple">Listado Nuevo</a>
+          <span class="btn btn-purple" data-bs-toggle="modal" data-bs-target="#modal_agregar_invitado">
+            Listado Nuevo
+          </span>
           <hr>
           <div id="tablaInvitados"></div>
         </div>
@@ -20,7 +22,11 @@
   </div>
 </div>
 
-<?php include "partes/footer.php"; ?>
+<?php 
+  include "listados/modal_agregar.php";
+  include "listados/modal_editar.php";
+  include "partes/footer.php"; 
+?>
 
 <script src="../publico/js/invitados.js"></script>
     
