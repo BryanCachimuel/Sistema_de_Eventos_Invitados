@@ -35,6 +35,18 @@
                 echo "No se a podido agregar el evento nuevo: ".$e;
             }
         }
+
+        public function eliminarEvento($id_evento){
+            try {
+                $conexion = Conexion::conectar();
+                $sql = "DELETE FROM eventos WHERE id_evento=?";
+                $query = $conexion->prepare($sql);
+                $query->bind_param('i',$id_evento);
+                return $query->execute();
+            } catch (Exception $e) {
+                echo "No se a podido eliminar el evento: ".$e;
+            }
+        }
     }
 
 ?>
