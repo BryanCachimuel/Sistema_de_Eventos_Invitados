@@ -15,5 +15,6 @@
     <link rel="stylesheet" href="../publico/css/estilos.css">  
     <link rel="stylesheet" href="../publico/librerias/fontawesome/css/all.css">
     <link rel="stylesheet" href="../publico/librerias/datatables/datatables.css">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
 </head>
   <body>
