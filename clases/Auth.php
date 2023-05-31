@@ -19,17 +19,26 @@
         public function inicio_sesion($usuario, $password){
            try {
                 $conexion = parent::conectar();
-                $passwordExistente = "";
+                $data_usuario = "";
+                $password_usuario = "";
                 $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario'";
                 $respuesta = mysqli_query($conexion, $sql);
-                $passwordExistente = mysqli_fetch_array($respuesta)['password'];
                 
-                if(password_verify($password, $passwordExistente)){
-                    $_SESSION['usuario'] = $usuario;
-                    return true;
+                if(mysqli_num_rows($respuesta) > 0){
+                    $data_usuario = mysqli_fetch_array($respuesta);
+                    $password_usuario = $data_usuario['password'];
+
+                    if(password_verify($password, $password_usuario)){
+                        $_SESSION['usuario'] = $usuario;
+                        $_SESSION['id_usuario'] = $data_usuario['id_usuario'];
+                        return true;
+                    }else{
+                        return false;
+                    }
                 }else{
                     return false;
                 }
+                
            } catch (Exception $e) {
                 echo "No se pudo realizar el inicio de sesión";
            }
