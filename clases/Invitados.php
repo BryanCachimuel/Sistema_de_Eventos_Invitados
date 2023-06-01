@@ -33,6 +33,23 @@
                 echo "No se a podido obtener los eventos para seleccionar: ".$e;
             }
         }
+
+        public function agregarInvitado($data){
+            try {
+                $conexion = Conexion::conectar();
+                $sql = "INSERT INTO invitados(id_evento,
+                                              nombre_invitado,
+                                              email_invitado) 
+                                    VALUES(?,?,?)"; 
+                $query = $conexion->prepare($sql);
+                $query->bind_param('iss',$data['id_evento'],
+                                         $data['nombre_invitado'],
+                                         $data['email_invitado']);
+                return $query->execute();
+            } catch (Exception $e) {
+                echo "No se a podido agregar un invitado: ".$e;
+            }
+        }
     }
 
 ?>
