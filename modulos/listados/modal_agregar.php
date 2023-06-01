@@ -16,9 +16,9 @@
         <div class="modal-body">
           <?php echo $select; ?>
           <label for="nombre_invitado">Nombre Invitado: </label>
-          <input type="text" class="form-control" id="nombre_invitado" name="nombre_invitado">
+          <input type="text" class="form-control" id="nombre_invitado" name="nombre_invitado" required>
           <label for="email_invitado">Email Invitado: </label>
-          <input type="email" class="form-control" id="email_invitado" name="email_invitado">
+          <input type="email" class="form-control" id="email_invitado" name="email_invitado" required>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
