@@ -11,7 +11,26 @@
                 $respuesta = mysqli_query($conexion, $sql);
                 return mysqli_fetch_all($respuesta, MYSQLI_ASSOC);
             } catch (Exception $e) {
-                echo "No se ha podido mostrar la lista de invitados";
+                echo "No se ha podido mostrar la lista de invitados: ".$e;
+            }
+        }
+
+        public function seleccionarEventos(){
+            try {
+                $conexion = Conexion::conectar();
+                $sql = "SELECT * FROM eventos";
+                $respuesta = mysqli_query($conexion, $sql);
+                $select = '<label for="id_evento">Seleccione un Evento: </label>
+                            <select name="id_evento" id="id_evento" class="form-select">';
+
+                while($mostrar = mysqli_fetch_array($respuesta)){
+                    $select .=   '<option 
+                                    value='.$mostrar['id_evento'].'>' . $mostrar['evento_nombre']. 
+                                 '</option>';             
+                }
+                return $select .= '</select>';
+            } catch (Exception $e) {
+                echo "No se a podido obtener los eventos para seleccionar: ".$e;
             }
         }
     }
