@@ -21,7 +21,7 @@
                 $sql = "SELECT * FROM eventos";
                 $respuesta = mysqli_query($conexion, $sql);
                 $select = '<label for="id_evento">Seleccione un Evento: </label>
-                            <select name="id_evento" id="id_evento" class="form-select">';
+                            <select name="id_evento" id="id_evento" class="form-select" required>';
 
                 while($mostrar = mysqli_fetch_array($respuesta)){
                     $select .=   '<option 
@@ -50,6 +50,17 @@
                 echo "No se a podido agregar un invitado: ".$e;
             }
         }
-    }
 
+        public function eliminarInvitado($id_invitado){
+            try {
+                $conexion = Conexion::conectar();
+                    $sql = "DELETE FROM invitados WHERE id_invitado=?";
+                    $query = $conexion->prepare($sql);
+                    $query->bind_param('i',$id_invitado);
+                    return $query->execute(); 
+            } catch (Exception $e) {
+                echo "No se a podido eliminar el invitado: ".$e;
+            }
+        }
+    }
 ?>
