@@ -27,7 +27,7 @@
                 </span>
             </td>
             <td>
-                <span class="btn btn-danger">
+                <span class="btn btn-danger" onclick="eliminarEvento('<?php echo $evt['id_evento'] ?>')">
                     <i class="fa-solid fa-trash-can"></i>
                 </span>
             </td>
