@@ -30,3 +30,42 @@ function agregarInvitado(){
 
     return false;
 }
+
+function eliminarInvitado(id_invitado){
+    Swal.fire({
+        title: "¿Estás Seguro que quieres eliminar este Invitado?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Eliminar",
+        cancelButtonText: "Cancelar",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          $.ajax({
+            type: "POST",
+            data: 'id_invitado=' + id_invitado,
+            url: "../servidor/invitados/eliminar.php",
+            success: function (respuesta) {
+              if (respuesta == 1) {
+                $('#tablaInvitados').load('listados/tabla_invitados.php');
+                Swal.fire({
+                  icon: "success",
+                  title: "Eliminado",
+                  showConfirmButton: false,
+                  timer: 1900,
+                });
+              } else {
+                Swal.fire({
+                  icon: "error",
+                  title: "El Evento no se a Podido Eliminar" + respuesta,
+                  showConfirmButton: false,
+                  timer: 1900,
+                });
+              }
+            },
+          });
+        }
+      });
+      return false;
+}
