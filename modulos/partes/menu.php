@@ -18,6 +18,9 @@
         <li class="nav-item">
             <a class="nav-link active" href="listados.php"><i class="fa-solid fa-clipboard-list"></i> Listas de Invitados</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="usuarios.php"><i class="fa-solid fa-users"></i> Listas de Usuarios</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa-solid fa-user-tie"></i> <?php echo $_SESSION['usuario']; ?>
