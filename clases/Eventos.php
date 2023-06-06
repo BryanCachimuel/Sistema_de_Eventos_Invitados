@@ -47,6 +47,23 @@
                 echo "No se a podido eliminar el evento: ".$e;
             }
         }
+
+        public function editarEvento($id_evento){
+            try {
+                $conexion = Conexion::conectar();
+                $sql = "SELECT id_evento,
+                               evento_nombre,
+                               DATE_FORMAT(hora_inicio,'%H:%i:%s') AS hora_inicio, 
+                               DATE_FORMAT(hora_fin,'%H:%i:%s') AS hora_fin,
+                               fecha
+                        FROM eventos 
+                        WHERE id_evento='$id_evento'";
+                $respuesta = mysqli_query($conexion,$sql);
+                return mysqli_fetch_all($respuesta,MYSQLI_ASSOC);
+            } catch (Exception $e) {
+                echo "No se a podido extraer los datos del registro: ".$e;
+            }
+        }
     }
 
 ?>
