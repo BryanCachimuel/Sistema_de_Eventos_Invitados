@@ -22,7 +22,7 @@
             <td><?php echo $evt['hora_fin'] ?></td>
             <td><?php echo $evt['fecha'] ?></td>
             <td>
-                <span class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal_editar_evento">
+                <span class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal_editar_evento" onclick="editarEvento('<?php echo $evt['id_evento']?>')">
                     <i class="fa-solid fa-pen-to-square"></i>
                 </span>
             </td>
