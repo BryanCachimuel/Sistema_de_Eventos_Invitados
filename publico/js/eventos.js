@@ -68,3 +68,19 @@ function eliminarEvento(id_evento) {
   });
   return false;
 }
+
+function editarEvento(id_evento){
+    $.ajax({
+      type:"POST",
+      url:"../servidor/eventos/editar.php",
+      data:"id_evento=" + id_evento,
+      success:function(respuesta){
+        respuesta = jQuery.parseJSON(respuesta);
+        $('#evento_nombreu').val(respuesta[0].evento_nombre);
+        $('#hora_iniciou').val(respuesta[0].hora_inicio);
+        $('#hora_finu').val(respuesta[0].hora_fin);
+        $('#fechau').val(respuesta[0].fecha);
+        $('#id_evento').val(respuesta[0].id_evento);
+      }
+    });
+}
