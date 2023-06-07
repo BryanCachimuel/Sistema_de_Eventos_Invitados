@@ -21,8 +21,8 @@
             <td><?php echo $inv['emailInvitado'] ?></td>
             <td><?php echo $inv['nombreEvento'] ?></td>
             <td><?php echo $inv['fechaEvento'] ?></td>
-            <td>
-                <span class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal_agregar_invitado">
+            <td>      
+                <span class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal_editar_invitado" onclick="editarInvitado('<?php echo $inv['idInvitado'] ?>')">
                     <i class="fa-solid fa-user-pen"></i>
                 </span>
             </td>
