@@ -62,5 +62,36 @@
                 echo "No se a podido eliminar el invitado: ".$e;
             }
         }
+
+        public function seleccionarEventosEditar(){
+            try {
+                $conexion = Conexion::conectar();
+                $sql = "SELECT * FROM eventos";
+                $respuesta = mysqli_query($conexion, $sql);
+                $select = '<label for="id_eventoe">Seleccione un Evento: </label>
+                            <select name="id_eventoe" id="id_eventoe" class="form-select" required>';
+
+                while($mostrar = mysqli_fetch_array($respuesta)){
+                    $select .=   '<option 
+                                    value='.$mostrar['id_evento'].'>' . $mostrar['evento_nombre']. 
+                                 '</option>';             
+                }
+                return $select .= '</select>';
+            } catch (Exception $e) {
+                echo "No se a podido obtener los eventos para seleccionar: ".$e;
+            }
+        }
+
+        public function editarInvitado($id_invitado){
+            try {
+                $conexion = Conexion::conectar();
+                $sql = "SELECT * FROM invitados 
+                        WHERE id_invitado='$id_invitado'";
+                $respuesta = mysqli_query($conexion,$sql);
+                return mysqli_fetch_all($respuesta,MYSQLI_ASSOC);
+            } catch (Exception $e) {
+                echo "No se a podido extraer los datos del registro: ".$e;
+            }
+        }
     }
 ?>
