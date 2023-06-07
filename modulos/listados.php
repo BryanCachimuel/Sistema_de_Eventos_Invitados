@@ -1,4 +1,6 @@
 <?php 
+  include "../clases/Invitados.php";
+  $Invitados = new Invitados();
   include "partes/header.php"; 
   include "partes/menu.php";
 ?>
