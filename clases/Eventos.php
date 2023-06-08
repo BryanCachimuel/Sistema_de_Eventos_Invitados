@@ -64,6 +64,28 @@
                 echo "No se a podido extraer los datos del registro: ".$e;
             }
         }
+
+        public function actualizarEvento($data){
+            try {
+                $conexion = Conexion::conectar();
+                $sql = "UPDATE eventos SET id_usuario=?, 
+                                           evento_nombre=?, 
+                                           hora_inicio=?,
+                                           hora_fin=?,
+                                           fecha=?
+                        WHERE id_evento=?";
+                $query = $conexion->prepare($sql);
+                $query->bind_param('issssi', $data['id_usuario'],
+                                             $data['evento_nombre'],
+                                             $data['hora_inicio'],
+                                             $data['hora_fin'],
+                                             $data['fecha'],
+                                             $data['id_evento']);
+                return $query->execute();
+            } catch (Exception $e) {
+                echo "No se a podido actualizar el registro del evento: ".$e;
+            }
+        }
     }
 
 ?>
