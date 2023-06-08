@@ -9,8 +9,10 @@
     <div class="col">
       <div class="card mt-3">
         <div class="card-body">
-          Listado de Eventos <br>
-          <span href="" class="btn btn-purple" data-bs-toggle="modal" data-bs-target="#modal_agregar_evento">Evento Nuevo</span>
+          <h3 class="titulo">Listado de Eventos</h3> <br>
+          <span href="" class="btn btn-purple" data-bs-toggle="modal" data-bs-target="#modal_agregar_evento">
+            <i class="fa-solid fa-circle-plus"></i> Evento Nuevo
+          </span>
           <hr>
           <div id="tablaEventos"></div>
         </div>
