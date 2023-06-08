@@ -84,3 +84,30 @@ function editarEvento(id_evento){
       }
     });
 }
+
+function actualizarEvento(){
+  $.ajax({
+    type:"POST",
+    data:$('#frmEditarEvento').serialize(),
+    url:"../servidor/eventos/actualizar.php", 
+    success:function(respuesta){
+      if (respuesta == 1) {
+        $("#tablaEventos").load("eventos/tabla_eventos.php");
+        Swal.fire({
+          icon: "success",
+          title: "Actualizado Correctamente",
+          showConfirmButton: false,
+          timer: 1900,
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "El Evento no se a Podido Actualizar" + respuesta,
+          showConfirmButton: false,
+          timer: 1900,
+        });
+      }
+    }
+  });
+  return false;
+}
