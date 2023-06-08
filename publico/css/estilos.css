@@ -9,3 +9,14 @@
     border-color: #9400D3; 
     color: #fff; 
 }
+
+.titulo{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.modal-title{
+    color: #fff;
+    font-weight: bold;
+}
