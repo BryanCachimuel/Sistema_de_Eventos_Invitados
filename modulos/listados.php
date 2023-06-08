@@ -11,10 +11,10 @@
     <div class="col">
       <div class="card mt-3">
         <div class="card-body">
-          Listado de Invitados
+          <h3 class="titulo">Listado de Invitados</h3>
           <br>
           <span class="btn btn-purple" data-bs-toggle="modal" data-bs-target="#modal_agregar_invitado">
-            Listado Nuevo
+            <i class="fa-solid fa-circle-plus"></i> Listado Nuevo
           </span>
           <hr>
           <div id="tablaInvitados"></div>
