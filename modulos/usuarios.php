@@ -9,7 +9,8 @@
     <div class="col">
       <div class="card mt-3">
         <div class="card-body">
-          Listado de Usuarios <br>
+          <h3 class="titulo">Listado de Usuarios</h3> 
+          <br>
           <!--<span href="" class="btn btn-purple" data-bs-toggle="modal" data-bs-target="#modal_agregar_evento">Evento Nuevo</span>-->
           <hr>
           <div id="tablaUsuarios"></div>
