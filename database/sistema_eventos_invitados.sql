@@ -173,7 +173,7 @@ SELECT
     inv.email_invitado as emailInvitado,
     inv.id_evento as idEvento,
     inv.nombre_invitado as nombreInvitado,
-    evt.fecha as fechaEvento
+    DATE_FORMAT(evt.fecha, '%d-%m-%Y') AS fechaEvento 
 FROM 
 invitados as inv 
 INNER JOIN eventos as evt ON inv.id_evento = evt.id_evento;
