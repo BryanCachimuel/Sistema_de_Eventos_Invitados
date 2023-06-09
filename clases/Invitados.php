@@ -93,5 +93,23 @@
                 echo "No se a podido extraer los datos del registro: ".$e;
             }
         }
+
+        public function actualizarInvitado($data){
+            try {
+                $conexion = Conexion::conectar();
+                $sql = "UPDATE invitados SET id_evento=?,
+                                              nombre_invitado=?,
+                                              email_invitado=? 
+                        WHERE id_invitado=?"; 
+                $query = $conexion->prepare($sql);
+                $query->bind_param('issi',$data['id_evento'],
+                                          $data['nombre_invitado'],
+                                          $data['email_invitado'],
+                                          $data['id_invitado']);
+                return $query->execute();
+            } catch (Exception $e) {
+                echo "No sea podido actualzar el registro: ".$e;
+            }
+        }
     }
 ?>
