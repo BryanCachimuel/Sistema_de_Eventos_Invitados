@@ -1,5 +1,5 @@
 <?php
-  $seleccionar = $Invitados->seleccionarEventosEditar();
+  $seleccionar = $Invitados->seleccionarEventosEditar($_SESSION['id_usuario']);
 ?>
 <form id="frmEditarInvitado" onsubmit="return actualizarInvitado()">
   <!-- Modal -->
