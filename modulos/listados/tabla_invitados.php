@@ -1,7 +1,8 @@
 <?php
+    session_start();
     include "../../clases/Invitados.php";
     $Invitados = new Invitados();
-    $items =$Invitados->mostrarInvitados();
+    $items =$Invitados->mostrarInvitados($_SESSION['id_usuario']);
 ?>
 <table class="table table-sm table-hover" id="tabla_invitados_load">
     <thead>
