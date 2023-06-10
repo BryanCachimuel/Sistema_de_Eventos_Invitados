@@ -169,6 +169,7 @@ COMMIT;
 CREATE VIEW v_invitados AS
 SELECT 
 	inv.id_invitado as idInvitado,
+    evt.id_usuario as id_usuario,
     evt.evento_nombre as nombreEvento,
     inv.email_invitado as emailInvitado,
     inv.id_evento as idEvento,
