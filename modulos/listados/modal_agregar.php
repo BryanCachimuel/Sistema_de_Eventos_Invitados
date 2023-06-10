@@ -1,5 +1,5 @@
 <?php
-  $select =$Invitados->seleccionarEventos();
+  $select =$Invitados->seleccionarEventos($_SESSION['id_usuario']);
 ?>
 
 <form id="frmAgregarInvitado" onsubmit="return agregarInvitado()">
