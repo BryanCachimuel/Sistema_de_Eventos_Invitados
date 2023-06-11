@@ -91,6 +91,17 @@
                 echo "No se a podido actualizar el registro del evento: ".$e;
             }
         }
-    }
 
+        public function mostrarInvitadosEvento($id_evento){
+            try {
+                $conexion = Conexion::conectar();
+                $sql = "SELECT * FROM v_invitados 
+                        WHERE idEvento='$id_evento'";
+                $respuesta = mysqli_query($conexion, $sql);
+                return mysqli_fetch_all($respuesta, MYSQLI_ASSOC);
+            } catch (Exception $e) {
+                echo "No se ha podido mostrar la lista de invitados de los eventos: ".$e;
+            }
+        }
+    }
 ?>
