@@ -13,6 +13,7 @@
             <th>Fecha</th>
             <th>Editar</th>
             <th>Eliminar</th>
+            <th>Impremir</th>
         </tr>
     </thead>
     <tbody>
@@ -31,6 +32,11 @@
                 <span class="btn btn-danger" onclick="eliminarEvento('<?php echo $evt['id_evento'] ?>')">
                     <i class="fa-solid fa-trash-can"></i>
                 </span>
+            </td>
+            <td>
+                <a href="listado_invitados.php?id_evento=<?php echo $evt['id_evento'] ?>" class="btn btn-info">
+                    <i class="fa-solid fa-print"></i>
+                </a>
             </td>
         </tr>
         <?php endforeach; ?>
