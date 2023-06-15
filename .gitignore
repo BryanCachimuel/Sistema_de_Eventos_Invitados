@@ -1,2 +1,5 @@
 publico/imagenes
 publico/librerias
+vendor
+composer.json
+composer.lock
