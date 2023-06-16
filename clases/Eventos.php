@@ -103,5 +103,17 @@
                 echo "No se ha podido mostrar la lista de invitados de los eventos: ".$e;
             }
         }
+
+        public function existenInvitados($id_evento){
+            try {
+                $conexion = Conexion::conectar();
+                $sql = "SELECT COUNT(*) as total FROM invitados 
+                        WHERE id_evento='$id_evento'";
+                $respuesta = mysqli_query($conexion, $sql);
+                return mysqli_fetch_array($respuesta)['total'];
+            } catch (Exception $e) {
+                echo "No se a podido comprobar si existen Invitados en el evento: ".$e;
+            }
+        }
     }
 ?>
