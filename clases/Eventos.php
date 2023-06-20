@@ -1,5 +1,7 @@
 <?php
 
+use FTP\Connection;
+
     include "Conexion.php";
 
     class Eventos extends Conexion{
@@ -115,5 +117,26 @@
                 echo "No se a podido comprobar si existen Invitados en el evento: ".$e;
             }
         }
+
+        public function fullCalendar($id_usuario){
+            try {
+                $conexion = Conexion::conectar();
+                $sql = "SELECT 
+                            id_evento AS id,
+                            evento_nombre AS title,
+                            hora_inicio AS start,
+                            hora_fin AS end
+                        FROM
+                            eventos
+                        WHERE id_usuario='$id_usuario'";
+            $respuesta = mysqli_query($conexion, $sql);
+            $eventos = mysqli_fetch_all($respuesta, MYSQLI_ASSOC);
+            
+            // retorna un array JSON con los eventos
+            return json_encode($eventos);
+
+            } catch (Exception $e) {
+                echo "No se a podido mostrar el calendario: ".$e;
+            }
+        }
     }
-?>
