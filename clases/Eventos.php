@@ -6,15 +6,25 @@ use FTP\Connection;
 
     class Eventos extends Conexion{
 
-        public function mostrarEventos($id_usuario){
+        public function mostrarEventos($id_usuario, $fecha){
             try {
                 $conexion = Conexion::conectar();
-                $sql = "SELECT id_evento,
+                if($fecha != ""){
+                    $sql = "SELECT id_evento,
+                                evento_nombre,
+                                DATE_FORMAT(hora_inicio,'%H:%i:%s') AS hora_inicio, 
+                                DATE_FORMAT(hora_fin,'%H:%i:%s') AS hora_fin,
+                                DATE_FORMAT(fecha, '%d-%m-%Y') AS fecha 
+                        FROM eventos 
+                        WHERE id_usuario='$id_usuario' AND fecha LIKE '%". $fecha ."%'";
+                }else{
+                    $sql = "SELECT id_evento,
                                 evento_nombre,
                                 DATE_FORMAT(hora_inicio,'%H:%i:%s') AS hora_inicio, 
                                 DATE_FORMAT(hora_fin,'%H:%i:%s') AS hora_fin,
                                 DATE_FORMAT(fecha, '%d-%m-%Y') AS fecha 
                         FROM eventos WHERE id_usuario='$id_usuario'";
+                }
                 $respuesta = mysqli_query($conexion, $sql);
                 return mysqli_fetch_all($respuesta, MYSQLI_ASSOC);
             } catch (Exception $e) {
