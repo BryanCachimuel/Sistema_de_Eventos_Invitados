@@ -111,3 +111,8 @@ function actualizarEvento(){
   });
   return false;
 }
+
+function buscarPorFecha(){
+  let fecha = $('#fechaBuscar').val();
+  $("#tablaEventos").load("eventos/tabla_eventos.php?fecha=" + fecha);
+}
