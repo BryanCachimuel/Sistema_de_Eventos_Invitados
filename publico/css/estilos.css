@@ -1,13 +1,13 @@
 .btn-purple {
-    background-color: #8A2BE2; 
-    border-color: #8A2BE2; 
+    background-color: #2b5fe2; 
+    border-color: #2b5fe2; 
     color: #fff; 
 }
   
 .btn-purple:hover {
-    background-color: #9400D3; 
-    border-color: #9400D3; 
-    color: #fff; 
+    /*background-color: #2ba5e2; */
+    border-color: #2ba5e2; 
+    color: #2b5fe2; 
 }
 
 .titulo{
