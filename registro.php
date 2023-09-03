@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sistema de Eventos e Invitados</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="publico/librerias/fontawesome/css/all.css">
     <link rel="stylesheet" href="publico/css/registro.css">
     <link rel="stylesheet" href="publico/css/estilos.css">
 </head>
@@ -20,11 +21,14 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-9 col-lg-8 mx-auto">
-                                <h3 class="registro-heading mb-4">Registro de Usuarios</h3>
+                                <div class="icono text-center">
+                                    <a href="/sistema_eventos_invitados/index.php"><i class="fa-solid fa-shop"></i></a>
+                                </div>
+                                <h3 class="registro-heading mb-4 text-center">Registro de Usuarios</h3>
 
                                 <form action="servidor/registro/registrar.php" method="POST" autocomplete="off">
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario" required autofocus>
+                                        <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario" required>
                                         <label for="usuario">Usuario</label>
                                     </div>
 
@@ -37,7 +41,7 @@
                                         <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required>
                                         <label for="password">Contraseña</label>
                                     </div>
-                                    
+
                                     <div class="form-floating mb-3">
                                         <input type="password" class="form-control" id="confirmar_password" name="confirmar_password" placeholder="Contraseña" required>
                                         <label for="confirmar_password">Confirmar Contraseña</label>
