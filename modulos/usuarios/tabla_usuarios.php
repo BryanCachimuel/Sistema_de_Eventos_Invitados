@@ -1,7 +1,7 @@
 <?php
-    include "../../clases/Auth.php";
-    $Auth = new Auth();
-    $items = $Auth->listarUsuarios();
+    include "../../clases/Usuarios.php";
+    $Usuarios = new Usuarios();
+    $items = $Usuarios->listadoUsuarios();
 ?>
 <table class="table table-sm table-hover" id="tabla_usuarios_load">
     <thead>
