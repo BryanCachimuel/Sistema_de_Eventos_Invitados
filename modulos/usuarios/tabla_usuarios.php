@@ -18,7 +18,7 @@
             <td><?php echo $usr['usuario']?></td>
             <td><?php echo $usr['correo'] ?></td>
             <td>
-                <span class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal_editar_usuario">
+                <span class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal_editar_usuario" onclick="editarUsuarios('<?php echo $usr['id_usuario']?>')">
                     <i class="fa-solid fa-pen-to-square"></i>
                 </span>
             </td>
