@@ -22,6 +22,7 @@
 
 
 <?php 
+  include "usuarios/modal_editar.php";
   include "partes/footer.php"; 
 ?>
 
