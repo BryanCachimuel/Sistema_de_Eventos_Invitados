@@ -43,6 +43,18 @@ class Usuarios extends Conexion {
         }
     }
 
+    public function eliminarUsuario($id_usuario){
+        try {
+            $conexion= parent::conectar();
+            $sql = "DELETE FROM usuarios WHERE id_usuario=?";
+            $query = $conexion->prepare($sql);
+            $query->bind_param('i',$id_usuario);
+            return $query->execute();
+        } catch (Exception $e) {
+            echo "No se a podido eliminar el usuario: ".$e;
+        }
+    }
+
 }
 
 ?>
