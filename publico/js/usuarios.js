@@ -14,3 +14,30 @@ function editarUsuarios(id_usuario){
     }
   });
 }
+
+function actualizarUsuario(){
+  $.ajax({
+    type:"POST",
+    data:$('#frmEditarUsuario').serialize(),
+    url:"../servidor/usuarios/actualizar.php",
+    success:function(respuesta){
+      if(respuesta == 1){
+        $("#tablaUsuarios").load("usuarios/tabla_usuarios.php");
+        Swal.fire({
+          icon: "success",
+          title: "Actualizado Correctamente",
+          showConfirmButton: false,
+          timer: 1900,
+        });
+      }else{
+        Swal.fire({
+          icon: "error",
+          title: "El Usuario no se a Podido Actualizar" + respuesta,
+          showConfirmButton: false,
+          timer: 1900,
+        });
+      }
+    }
+  });
+  return false;
+}
